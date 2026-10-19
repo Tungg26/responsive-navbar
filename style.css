@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ✅ Responsive cho Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Ẩn menu mặc định trên mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        display: block;
+        /* Hiện nút hamburger */
+    }
+
+    /* Class được thêm bằng JavaScript để mở menu */
+    .nav-links.active {
+        display: flex;
+    }
+}
