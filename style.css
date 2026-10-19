@@ -1,109 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 15px 20px;
-    color: white;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #f4f4f4;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.services {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.service {
-    flex: 1;
-    min-width: 250px;
+.item {
     background-color: lightblue;
     padding: 20px;
-    border-radius: 8px;
-}
-
-.testimonials {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #ddd;
 }
 
-.testimonial {
-    margin-top: 15px;
-    font-style: italic;
-}
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-/* ✅ Responsive cho Mobile */
-@media (max-width: 768px) {
-    .nav ul {
-        display: none;
-        /* Ẩn menu ngang trên mobile */
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .service-container {
-        flex-direction: column;
-    }
-
-    .service {
-        width: 100%;
-    }
-
-    .services,
-    .testimonials {
-        padding: 40px 20px;
-    }
+.item1 {
+    grid-row: 1 / 3;
 }
